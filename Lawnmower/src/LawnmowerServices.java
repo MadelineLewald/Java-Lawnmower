@@ -20,6 +20,9 @@ public class LawnmowerServices { //class
 		static int money = 0;
 	}
 	
+	public static void gameOver() {
+		System.out.println("Goodbye, have a nice day.");
+	}
 
 	public static void first() {	
 		
@@ -179,7 +182,7 @@ public class LawnmowerServices { //class
 				first();
 			}
 			else {
-				System.out.println("Goodbye, have a nice day.");
+				gameOver();
 			}
 		}
 			
