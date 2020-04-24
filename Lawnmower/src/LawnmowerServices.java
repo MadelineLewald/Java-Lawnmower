@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-public class LawnmowerServices {
+public class LawnmowerServices { //class
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	public static void main(String[] args) { //method
+		// void = identifier
 		
 
 		first();
 		second();
 		fourth();
-		
+		sixth();
+		eighth();
 		
 
 	}
@@ -118,13 +118,13 @@ public class LawnmowerServices {
 	
 	public static void seventh() {	
 			
-		for(int x = 25; x <= 100; x+=25) {
+		for(int x = 50; x <= 500; x+=50) {
 			System.out.println("would you like to  cut the grass?");
 			Scanner scanner = new Scanner(System.in); //System.in means its coming from the console
 			String answer = scanner.nextLine();
 			if(answer.equals("yes")) {
-				Global.money+=25;
-				System.out.println("You have $" + Global.money + " and are using an old push mower to cut the grass");
+				Global.money+=50;
+				System.out.println("You have $" + Global.money + " and are using a fancy ride mower to cut the grass");
 			}
 			else if(answer.contentEquals("no")) {
 				System.out.println("You still have $" + Global.money);
@@ -132,5 +132,39 @@ public class LawnmowerServices {
 		}
 			
 	}
+	
+	public static void eighth() {
+		
+		if(Global.money == 500) {
+			System.out.println("Would you like to buy a team of starving students?");
+			Scanner scanner = new Scanner(System.in);
+			String answer = scanner.nextLine();
+			if(answer.equals("yes")) {
+				Global.money-=500;
+				System.out.println("You have $" + Global.money);
+				ninth();
+			}
+		}
+			
+	}
+	
+	public static void ninth() {	
+		
+		for(int x = 500; x <= 1000; x+=100) {
+			System.out.println("would you like to  cut the grass?");
+			Scanner scanner = new Scanner(System.in); //System.in means its coming from the console
+			String answer = scanner.nextLine();
+			if(answer.equals("yes")) {
+				Global.money+=500;
+				System.out.println("You have $" + Global.money + " and are using a team of starving students to cut the grass");				
+			}
+			else if(answer.contentEquals("no")) {
+				System.out.println("You still have $" + Global.money);
+			}
+		}
+		
+	}
+	
+	
 
 }
