@@ -12,6 +12,7 @@ public class LawnmowerServices { //class
 		sixth();
 		eighth();
 		
+		
 
 	}
 	
@@ -23,7 +24,7 @@ public class LawnmowerServices { //class
 	public static void first() {	
 		
 		for(int x = 0; x < 5; x++) {
-			System.out.println("would you like to  cut the grass?");
+			System.out.println("Would you like to  cut the grass?");
 			Scanner scanner = new Scanner(System.in); //System.in means its coming from the console
 			String answer = scanner.nextLine();
 			if(answer.equals("yes")) {
@@ -55,7 +56,7 @@ public class LawnmowerServices { //class
 	public static void third() {	
 			
 		for(int x = 5; x < 26; x+=5) {
-			System.out.println("would you like to  cut the grass?");
+			System.out.println("Would you like to  cut the grass?");
 			Scanner scanner = new Scanner(System.in); //System.in means its coming from the console
 			String answer = scanner.nextLine();
 			if(answer.equals("yes")) {
@@ -87,7 +88,7 @@ public class LawnmowerServices { //class
 	public static void fifth() {	
 		
 		for(int x = 25; x <= 100; x+=25) {
-			System.out.println("would you like to  cut the grass?");
+			System.out.println("Would you like to  cut the grass?");
 			Scanner scanner = new Scanner(System.in); //System.in means its coming from the console
 			String answer = scanner.nextLine();
 			if(answer.equals("yes")) {
@@ -119,7 +120,7 @@ public class LawnmowerServices { //class
 	public static void seventh() {	
 			
 		for(int x = 50; x <= 500; x+=50) {
-			System.out.println("would you like to  cut the grass?");
+			System.out.println("Would you like to  cut the grass?");
 			Scanner scanner = new Scanner(System.in); //System.in means its coming from the console
 			String answer = scanner.nextLine();
 			if(answer.equals("yes")) {
@@ -151,7 +152,7 @@ public class LawnmowerServices { //class
 	public static void ninth() {	
 		
 		for(int x = 500; x <= 1000; x+=100) {
-			System.out.println("would you like to  cut the grass?");
+			System.out.println("Would you like to  cut the grass?");
 			Scanner scanner = new Scanner(System.in); //System.in means its coming from the console
 			String answer = scanner.nextLine();
 			if(answer.equals("yes")) {
@@ -161,8 +162,27 @@ public class LawnmowerServices { //class
 			else if(answer.contentEquals("no")) {
 				System.out.println("You still have $" + Global.money);
 			}
+			tenth();
 		}
 		
+	}
+	
+	public static void tenth() {
+		
+		if(Global.money == 1000) {
+			System.out.println("You won!! Now you can feed your starving students! Would you like to play again?");
+			Scanner scanner = new Scanner(System.in);
+			String answer = scanner.nextLine();
+			if(answer.equals("yes")) {
+				Global.money-=1000;
+				System.out.println("You have $" + Global.money);
+				first();
+			}
+			else {
+				System.out.println("Goodbye, have a nice day.");
+			}
+		}
+			
 	}
 	
 	
